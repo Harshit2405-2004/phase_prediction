@@ -1,0 +1,14 @@
+# This is the main build configuration for Netlify.
+[build]
+  # This command installs the Python dependencies for your function.
+  command = "pip install -r netlify/functions/requirements.txt"
+  
+  # This specifies the directory where your serverless functions are located.
+  functions = "netlify/functions/"
+  
+  # This specifies the directory that contains your static frontend files.
+  publish = "public/"
+
+# This section ensures your data file is included with the function.
+[functions]
+  included_files = ["netlify/functions/HEA.csv"]

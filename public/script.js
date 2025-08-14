@@ -43,8 +43,9 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         try {
-            // The fetch request points to our serverless function
-            const response = await fetch('http://127.0.0.1:5000/api/predict', {
+            // *** UPDATED FOR NETLIFY ***
+            // The fetch request now points to the Netlify serverless function path.
+            const response = await fetch('/.netlify/functions/predict', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

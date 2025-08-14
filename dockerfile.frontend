@@ -1,0 +1,11 @@
+# Use a lightweight Nginx image
+FROM nginx:alpine
+
+# Copy the static website files from the 'public' folder to the Nginx web server directory
+COPY ./public /usr/share/nginx/html
+
+# Make port 80 available
+EXPOSE 80
+
+# The default Nginx command will start the server
+CMD ["nginx", "-g", "daemon off;"]
