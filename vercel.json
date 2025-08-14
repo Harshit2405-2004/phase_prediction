@@ -12,12 +12,15 @@
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
+      "src": "/api/predict",
       "dest": "api/predict.py"
     },
     {
+      "handle": "filesystem"
+    },
+    {
       "src": "/(.*)",
-      "dest": "public/$1"
+      "dest": "/public/$1"
     }
   ]
 }

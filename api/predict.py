@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS  # Import CORS
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import StandardScaler
@@ -9,6 +10,7 @@ import os
 
 # --- Flask App Initialization ---
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes
 
 # Suppress warnings for a cleaner output
 warnings.filterwarnings('ignore')
