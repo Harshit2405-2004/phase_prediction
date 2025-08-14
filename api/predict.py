@@ -173,3 +173,7 @@ def predict_hea_phase_api():
 
     except Exception as e:
         return jsonify({'error': str(e)}), 500
+
+# --- This block runs the local development server ---
+if __name__ == '__main__':
+    app.run(debug=True)
