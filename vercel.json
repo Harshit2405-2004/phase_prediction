@@ -19,5 +19,8 @@
       "src": "/(.*)",
       "dest": "public/$1"
     }
-  ]
+  ],
+  "engines": {
+    "python": "3.9"
+  }
 }
